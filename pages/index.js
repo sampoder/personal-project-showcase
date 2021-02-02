@@ -11,6 +11,7 @@ const App = () => {
     ),url(https://i.gifer.com/HseP.gif)`,
         backgroundSize: 'cover',
         color: 'white',
+        fontSize: '1.3rem!important',
       }}
     >
       <Container as="main" py={4} variant="copy">
@@ -20,10 +21,10 @@ const App = () => {
             <Text sx={t => t.util.gxText('cyan', 'blue')}>we made.</Text>
           </Heading>
         </Heading>
-        <Heading sx={{ fontSize: '1.3rem', marginTop: '5px' }}>
+        <Text sx={{ fontSize: '1.3rem!important', fontWeight: '600', marginTop: '5px' }}>
           {' '}
           MYP Personal Project Exhibition 2021
-        </Heading>
+        </Text>
       </Container>
     </Box>
   )
