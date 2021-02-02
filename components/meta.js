@@ -9,11 +9,11 @@ const Meta = ({
   name = '', // site name
   description = '', // page description
   image = '', // social card image URL
-  url = 'https://next-theme-starter.vercel.app',
+  url = 'https://personal-project-showcase.vercel.app',
   children,
 }) => (
   <Head>
-    <meta key="og_locale" property="og:locale" content="en_US" />
+    <meta key="og_locale" property="og:locale" content="en_SG" />
     <meta key="og_type" property="og:type" content="website" />
     <meta key="og_site" property="og:site_name" content={name} />
     <title key="title">{makeTitle(title, name)}</title>
