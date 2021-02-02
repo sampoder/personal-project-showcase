@@ -20,7 +20,7 @@ const App = () => {
             <Text sx={t => t.util.gxText('cyan', 'blue')}>we made.</Text>
           </Heading>
         </Heading>
-        <Heading sx={{ fontSize: '1.3rem', marginTop: '4px' }}>
+        <Heading sx={{ fontSize: '1.3rem', marginTop: '5px' }}>
           {' '}
           MYP Personal Project Exhibition 2021
         </Heading>
