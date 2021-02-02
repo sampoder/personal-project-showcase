@@ -7,7 +7,7 @@ const App = () => {
         background: `linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.74),
-      rgba(100, 75, 37, 0.74)
+      rgba(25,25,60, 0.74)
     ),url(https://i.gifer.com/HseP.gif)`,
         backgroundSize: 'cover',
         color: 'white',
@@ -21,7 +21,13 @@ const App = () => {
             <Text sx={t => t.util.gxText('cyan', 'blue')}>we made.</Text>
           </Heading>
         </Heading>
-        <Text sx={{ fontSize: '1.3rem!important', fontWeight: '600', marginTop: '5px' }}>
+        <Text
+          sx={{
+            fontSize: '1.3rem!important',
+            fontWeight: '600',
+            marginTop: '5px',
+          }}
+        >
           {' '}
           MYP Personal Project Exhibition 2021
         </Text>
