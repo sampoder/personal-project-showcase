@@ -5,9 +5,9 @@ const makeTitle = (title, name) =>
   title === name ? title : `${title} – ${name}`
 
 const Meta = ({
-  title = 'Theme Starter', // page title
-  name = 'Theme Starter', // site name
-  description = 'This website was bootstrapped with @lachlanjc’s Next.js Theme Starter.', // page description
+  title = 'MYP Personal Project Exhibition 2021', // page title
+  name = '', // site name
+  description = '', // page description
   image = '', // social card image URL
   url = 'https://next-theme-starter.vercel.app',
   children,
