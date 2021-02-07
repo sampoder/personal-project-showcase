@@ -8,6 +8,7 @@ import {
   Heading,
   Text,
 } from 'theme-ui'
+import Emoji from './emoji'
 
 let avatarList = ({ maker, name, emojis, query }) => (
   <Box
@@ -34,7 +35,7 @@ let avatarList = ({ maker, name, emojis, query }) => (
           : 'inline-block',
     }}
   >
-    <Text sx={{ verticalAlign: 'middle', fontSize: '16px' }}>{emojis}</Text>
+    <Text sx={{ verticalAlign: 'middle', fontSize: '16px' }}><Emoji emoji={emojis} /></Text>
     <Text
       sx={{
         verticalAlign: 'middle',

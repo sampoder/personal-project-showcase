@@ -1,4 +1,5 @@
 import { Button, Box, Container, Image, Grid, Heading, Text } from 'theme-ui'
+import Emoji from './emoji'
 
 let globalContext = ({ name, emoji }) => (
   <Box
@@ -14,7 +15,7 @@ let globalContext = ({ name, emoji }) => (
     className="global-context"
   >
     <Text>
-      {emoji}
+      <Emoji emoji={emoji} />
       <span style={{ marginLeft: '8px' }}>
         <b>{name}</b>
       </span>
