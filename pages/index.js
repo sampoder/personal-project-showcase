@@ -5,9 +5,11 @@ import {
   Container,
   Image,
   Grid,
+  IconButton,
   Heading,
   Input,
   Text,
+  Close,
   Flex,
 } from 'theme-ui'
 import Intro from '../components/intro.mdx'
@@ -17,6 +19,7 @@ import React, { useState } from 'react'
 
 function App() {
   const [query, setQuery] = useState('')
+  const [highlightedImage, setHighlightedImage] = useState('')
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
       <Box
@@ -59,59 +62,125 @@ function App() {
             <Intro />
           </Box>
           <Box p={['2px', '16px', '16px']}>
+            <Box
+              sx={{
+                position: 'absolute',
+                zIndex: '999',
+                paddingLeft: '15px',
+                marginTop: '-12px',
+                fontSize: '3em',
+              }}
+            >
+              <Close
+                sx={{
+                  background: 'white',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    transform:
+                      highlightedImage == '' ? 'scale(1.05)' : 'scale(1)',
+                  },
+                  display: highlightedImage != '' ? 'default' : 'none',
+                }}
+                onClick={() => setHighlightedImage('')}
+              />
+            </Box>
             <Grid
               gap={2}
-              columns={[2, 2, 2]}
-              sx={{ gridAutoRows: '1fr' }}
+              columns={[2, 2, highlightedImage == '' ? 2 : 1]}
+              sx={{ gridAutoRows: '1fr', transition: 'all 1.2s ease-in-out' }}
               gap={24}
             >
               <Image
                 src="/1.jpg"
                 width="100%"
+                onClick={() => setHighlightedImage(1)}
                 sx={{
                   borderRadius: '8px',
-                  transition: 'all .2s ease-in-out',
+                  transition:
+                    highlightedImage == ''
+                      ? 'all .2s ease-in-out'
+                      : 'all 0s ease-in-out',
+                  display:
+                    highlightedImage == '' || highlightedImage == 1
+                      ? 'block'
+                      : 'none',
                   '&:hover': {
-                    transform: 'scale(1.05)',
+                    transform:
+                      highlightedImage == '' ? 'scale(1.05)' : 'scale(1)',
                   },
+                  height: highlightedImage == '' ? '150px' : null,
+                  mb: highlightedImage == '' ? '0px' : '8px',
+                  maxHeight: '324px',
                 }}
-                height="150px"
               />
               <Image
-                src="/1.jpg"
+                src="https://images.unsplash.com/photo-1440423226932-e7096a66f1c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
                 width="100%"
+                onClick={() => setHighlightedImage(2)}
                 sx={{
                   borderRadius: '8px',
-                  transition: 'all .2s ease-in-out',
+                  transition:
+                    highlightedImage == ''
+                      ? 'all .2s ease-in-out'
+                      : 'all 0s ease-in-out',
+                  display:
+                    highlightedImage == '' || highlightedImage == 2
+                      ? 'block'
+                      : 'none',
                   '&:hover': {
-                    transform: 'scale(1.05)',
+                    transform:
+                      highlightedImage == '' ? 'scale(1.05)' : 'scale(1)',
                   },
+                  height: highlightedImage == '' ? '150px' : null,
+                  mb: highlightedImage == '' ? '0px' : '8px',
+                  maxHeight: '324px',
                 }}
-                height="150px"
               />
               <Image
-                src="/1.jpg"
+                src="https://images.unsplash.com/photo-1559727801-763c7c950494?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
                 width="100%"
+                onClick={() => setHighlightedImage(3)}
                 sx={{
                   borderRadius: '8px',
-                  transition: 'all .2s ease-in-out',
+                  transition:
+                    highlightedImage == ''
+                      ? 'all .2s ease-in-out'
+                      : 'all 0s ease-in-out',
+                  display:
+                    highlightedImage == '' || highlightedImage == 3
+                      ? 'block'
+                      : 'none',
                   '&:hover': {
-                    transform: 'scale(1.05)',
+                    transform:
+                      highlightedImage == '' ? 'scale(1.05)' : 'scale(1)',
                   },
+                  height: highlightedImage == '' ? '150px' : null,
+                  mb: highlightedImage == '' ? '0px' : '8px',
+                  maxHeight: '324px',
                 }}
-                height="150px"
               />
               <Image
-                src="/1.jpg"
+                src="https://images.unsplash.com/photo-1584612924768-54be89e74165?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
                 width="100%"
+                onClick={() => setHighlightedImage(4)}
                 sx={{
                   borderRadius: '8px',
-                  transition: 'all .2s ease-in-out',
+                  transition:
+                    highlightedImage == ''
+                      ? 'all .2s ease-in-out'
+                      : 'all 0s ease-in-out',
+                  display:
+                    highlightedImage == '' || highlightedImage == 4
+                      ? 'block'
+                      : 'none',
                   '&:hover': {
-                    transform: 'scale(1.05)',
+                    transform:
+                      highlightedImage == '' ? 'scale(1.05)' : 'scale(1)',
                   },
+                  height: highlightedImage == '' ? '150px' : null,
+                  maxHeight: '324px',
+                  mb: highlightedImage == '' ? '0px' : '8px',
                 }}
-                height="150px"
               />
             </Grid>
           </Box>
@@ -317,14 +386,18 @@ function App() {
               >
                 @sampoder
               </a>
-              , open sourced <a
+              , open sourced{' '}
+              <a
                 href="https://github.com/sampoder/personal-project-showcase"
                 style={{
                   color: 'white',
                   fontWeight: '600',
                   textDecoration: 'none',
                 }}
-              >here</a>.
+              >
+                here
+              </a>
+              .
             </Heading>
           </Grid>
         </Container>
