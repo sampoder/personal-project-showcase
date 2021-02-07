@@ -16,12 +16,14 @@ import Intro from '../components/intro.mdx'
 import GlobalContext from '../components/global-context'
 import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
+import Meta from '../components/meta'
 
 function App() {
   const [query, setQuery] = useState('')
   const [highlightedImage, setHighlightedImage] = useState('')
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
+      <Meta/>
       <Box
         sx={{
           background: `linear-gradient(
@@ -210,16 +212,18 @@ function App() {
         <Container py={4}>
           <Grid columns={[1, 1, 1]}>
             <Heading sx={{ paddingTop: '8px' }}>
-              Explore All The Projects
+              Project Directory
             </Heading>
             <Input
               onChange={e => setQuery(e.target.value)}
-              placeholder={['🔎 Search']}
+              placeholder={['Search the projects']}
               sx={{
                 border: '1px dashed lightgrey',
                 textAlign: ['left', 'left', 'left'],
                 maxWidth: '600px',
-                color: 'text'
+                '::placeholder': {
+                  color: 'muted'
+                }
               }}
             />
           </Grid>
@@ -407,6 +411,9 @@ function App() {
           </Grid>
         </Container>
       </Box>
+      <style>{`::placeholder {
+      font-size: 1.1em;
+    }`}</style>
     </Box>
   )
 }

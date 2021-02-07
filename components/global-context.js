@@ -11,6 +11,7 @@ let globalContext = ({ name, emoji }) => (
         bg: 'rgba(0, 90, 133, 0.8)',
       },
     }}
+    className="global-context"
   >
     <Text>
       {emoji}
