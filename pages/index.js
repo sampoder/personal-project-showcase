@@ -13,8 +13,10 @@ import {
 import Intro from '../components/intro.mdx'
 import GlobalContext from '../components/global-context'
 import AvatarComponent from '../components/avatar-list'
+import React, { useState } from 'react'
 
-const App = () => {
+function App() {
+  const [query, setQuery] = useState('')
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
       <Box
@@ -66,25 +68,49 @@ const App = () => {
               <Image
                 src="/1.jpg"
                 width="100%"
-                style={{ borderRadius: '8px' }}
+                sx={{
+                  borderRadius: '8px',
+                  transition: 'all .2s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                }}
                 height="150px"
               />
               <Image
                 src="/1.jpg"
                 width="100%"
-                style={{ borderRadius: '8px' }}
+                sx={{
+                  borderRadius: '8px',
+                  transition: 'all .2s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                }}
                 height="150px"
               />
               <Image
                 src="/1.jpg"
                 width="100%"
-                style={{ borderRadius: '8px' }}
+                sx={{
+                  borderRadius: '8px',
+                  transition: 'all .2s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                }}
                 height="150px"
               />
               <Image
                 src="/1.jpg"
                 width="100%"
-                style={{ borderRadius: '8px' }}
+                sx={{
+                  borderRadius: '8px',
+                  transition: 'all .2s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                }}
                 height="150px"
               />
             </Grid>
@@ -94,7 +120,7 @@ const App = () => {
       <Box bg="blue" color="white">
         <Container py={4}>
           <Heading>Projects by Global Context</Heading>
-          <Grid columns={[2, 2, 3]} pt={3} gap="12px">
+          <Grid columns={[1, 2, 3]} pt={3} gap="12px">
             <GlobalContext emoji="👨‍👩‍👧‍👦" name="Identities and relationships" />
             <GlobalContext emoji="🕰" name="Orientation in space and time" />
             <GlobalContext emoji="💃" name="Personal and cultural expression" />
@@ -109,259 +135,198 @@ const App = () => {
       </Box>
       <Box>
         <Container py={4}>
-          <Grid columns={2}>
+          <Grid columns={[1, 1, 1]}>
             <Heading sx={{ paddingTop: '8px' }}>
               Explore All The Projects
             </Heading>
-            <Input placeholder="Search 🔎" sx={{ border: '1px dashed lightgrey', textAlign: 'right' }} />
+            <Input
+              onChange={e => setQuery(e.target.value)}
+              placeholder={['🔎 Search']}
+              sx={{
+                border: '1px dashed lightgrey',
+                textAlign: ['left', 'left', 'left'],
+                maxWidth: '600px',
+              }}
+            />
           </Grid>
           <Box ml="-10px" mt="8px">
             <AvatarComponent
               maker="Sam Poder"
               name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
               name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
+              query={query}
             />
             <AvatarComponent
               maker="Sam Poder"
-              name="Climatator: Simulating Climate Change"
+              name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
-              name="Stock Simulator"
+              name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
+              query={query}
             />
             <AvatarComponent
               maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
+              name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
-              name="Stock Simulator"
+              name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
+              query={query}
             />
             <AvatarComponent
               maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
+              name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
-              name="Stock Simulator"
+              name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
+              query={query}
             />
             <AvatarComponent
               maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
+              name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
-              name="Stock Simulator"
+              name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
+              query={query}
             />
             <AvatarComponent
               maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
+              name="Climatator"
               emojis="🌏🔥🥽"
+              query={query}
             />
             <AvatarComponent
               maker="Arsh Shrivastava"
-              name="Stock Simulator"
+              name="Kid-friendly Stock Simulator"
               emojis="💰📈"
+              query={query}
             />
             <AvatarComponent
               maker="Neil Ghosh"
               name="Dementia Smart Mirror"
               emojis="🧠🪞👵"
+              query={query}
             />
             <AvatarComponent
               maker="Neer Vikas Verma"
               name="Robot Hand"
               emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator: A Climate Change Simulator"
-              emojis="🌏🔥🥽"
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Stock Simulator"
-              emojis="💰📈"
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
+              query={query}
             />
           </Box>
         </Container>
       </Box>
       <Box bg="blue" color="white">
         <Container py={4}>
-          <Heading sx={{ fontSize: '18px' }}>Personal Project</Heading>
+          <Grid columns={2}>
+            <Heading sx={{ fontSize: '18px' }}>
+              MYP Personal Project Exhibition 2021
+            </Heading>
+            <Heading
+              sx={{ fontSize: '16px', fontWeight: '400', textAlign: 'right' }}
+            >
+              Website by{' '}
+              <a
+                href="https://github.com/sampoder"
+                style={{
+                  color: 'white',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                }}
+              >
+                @sampoder
+              </a>
+              , open sourced <a
+                href="https://github.com/sampoder/personal-project-showcase"
+                style={{
+                  color: 'white',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                }}
+              >here</a>.
+            </Heading>
+          </Grid>
         </Container>
       </Box>
     </Box>
