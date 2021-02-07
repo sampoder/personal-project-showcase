@@ -111,6 +111,7 @@ function App() {
                   height: highlightedImage == '' ? '150px' : null,
                   mb: highlightedImage == '' ? '0px' : '8px',
                   maxHeight: '324px',
+                  objectFit: 'cover'
                 }}
               />
               <Image
@@ -134,6 +135,7 @@ function App() {
                   height: highlightedImage == '' ? '150px' : null,
                   mb: highlightedImage == '' ? '0px' : '8px',
                   maxHeight: '324px',
+                  objectFit: 'cover'
                 }}
               />
               <Image
@@ -157,6 +159,7 @@ function App() {
                   height: highlightedImage == '' ? '150px' : null,
                   mb: highlightedImage == '' ? '0px' : '8px',
                   maxHeight: '324px',
+                  objectFit: 'cover'
                 }}
               />
               <Image
@@ -180,6 +183,7 @@ function App() {
                   height: highlightedImage == '' ? '150px' : null,
                   maxHeight: '324px',
                   mb: highlightedImage == '' ? '0px' : '8px',
+                  objectFit: 'cover'
                 }}
               />
             </Grid>
