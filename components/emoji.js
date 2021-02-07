@@ -27,7 +27,7 @@ const Twemoji = ({ emoji }) => (
         </style>
       </>
     ) : (
-      <>{emoji}</>
+      <>{emoji} </>
     )}
   </>
 )

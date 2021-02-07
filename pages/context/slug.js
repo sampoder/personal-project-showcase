@@ -12,7 +12,6 @@ import {
   Close,
   Flex,
 } from 'theme-ui'
-import Intro from '../../components/intro.mdx'
 import GlobalContext from '../../components/global-context'
 import AvatarComponent from '../../components/avatar-list'
 import React, { useState } from 'react'
@@ -24,23 +23,45 @@ function App() {
   const [highlightedImage, setHighlightedImage] = useState('')
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
-      <Meta title="Identities and Relationships Projects" name="MYP Personal Project Exhibition 2021"/>
+      <Meta
+        title="Identities and Relationships Projects"
+        name="MYP Personal Project Exhibition 2021"
+      />
       <Box bg="blue" color="white">
         <Container py={3}>
           <Grid columns={[1, 2, 2]} gap="12px">
-            <Box><GlobalContext style={{width: 'auto'}} emoji="👨‍👩‍👧‍👦" name="Identities and relationships" /></Box>
-            <Link href="/"><Heading sx={{ pt: '16px', textAlign: 'right', cursor: 'pointer' }}>
-              MYP Personal Project Exhibition 2021
-            </Heading></Link>
+            <Box>
+              <GlobalContext
+                style={{ width: 'auto' }}
+                emoji="👨‍👩‍👧‍👦"
+                name="Identities and relationships"
+              />
+            </Box>
+            <Link href="/">
+              <Heading
+                sx={{ pt: '16px', textAlign: 'right', cursor: 'pointer' }}
+              >
+                MYP Personal Project Exhibition 2021
+              </Heading>
+            </Link>
           </Grid>
         </Container>
       </Box>
       <Box>
         <Container py={4}>
-          <Grid columns={[1, 1, 1]}>
-            <Heading sx={{ paddingTop: '8px' }}>
-              Explore All The Projects
-            </Heading>
+          <Grid columns={[1, 2, 2]}>
+            <Box>
+              <Text>
+                The global context of <i>identities and relationships</i>{' '}
+                explores identity; beliefs and values; personal, physical,
+                mental, social and spiritual health; human relationships
+                including families, friends, communities and cultures; what it
+                means to be human.
+                <br /> <br />
+                The following projects explore some, if not all of these
+                concepts.
+              </Text>
+            </Box>
             <Input
               onChange={e => setQuery(e.target.value)}
               placeholder={['🔎 Search']}

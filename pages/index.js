@@ -12,7 +12,7 @@ import {
   Close,
   Flex,
 } from 'theme-ui'
-import Intro from '../components/intro.mdx'
+import Intro from '../components/home/intro.mdx'
 import GlobalContext from '../components/global-context'
 import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
