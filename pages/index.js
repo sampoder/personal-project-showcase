@@ -73,7 +73,7 @@ function App() {
             >
               <Close
                 sx={{
-                  background: 'white',
+                  background: 'var(--theme-ui-colors-background)',
                   cursor: 'pointer',
                   '&:hover': {
                     transform:
@@ -215,6 +215,7 @@ function App() {
                 border: '1px dashed lightgrey',
                 textAlign: ['left', 'left', 'left'],
                 maxWidth: '600px',
+                color: 'text'
               }}
             />
           </Grid>
