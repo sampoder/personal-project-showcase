@@ -13,7 +13,7 @@ import {
   Flex,
 } from 'theme-ui'
 import GlobalContext from '../../components/global-context'
-import AvatarComponent from '../../components/avatar-list'
+import Project from '../../components/large-list'
 import React, { useState } from 'react'
 import Meta from '../../components/meta'
 import Link from 'next/link'
@@ -47,7 +47,7 @@ function App() {
           </Grid>
         </Container>
       </Box>
-      <Box>
+      <Box sx={{minHeight: '100vh'}}>
         <Container py={4}>
           <Grid columns={[1, 2, 2]}>
             <Box>
@@ -62,163 +62,167 @@ function App() {
                 concepts.
               </Text>
             </Box>
-            <Input
-              onChange={e => setQuery(e.target.value)}
-              placeholder={['🔎 Search']}
-              sx={{
-                border: '1px dashed lightgrey',
-                textAlign: ['left', 'left', 'left'],
-                maxWidth: '600px',
-                color: 'text',
-              }}
+          </Grid>
+          <Input
+            onChange={e => setQuery(e.target.value)}
+            placeholder={['Search the projects']}
+            sx={{
+              border: '1px dashed lightgrey',
+              textAlign: ['left', 'left', 'left'],
+              maxWidth: '600px',
+              '::placeholder': {
+                color: 'muted',
+              },
+              my: 3
+            }}
+          />
+          <Grid columns={3}>
+          
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
+            />
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
+            />
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
+            />
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
+            />
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
+            />
+            <Project
+              maker="Sam Poder"
+              name="Climatator"
+              emojis="🌏🔥🥽"
+              query={query}
+            />
+            <Project
+              maker="Arsh Shrivastava"
+              name="Kid-friendly Stock Simulator"
+              emojis="💰📈"
+              query={query}
+            />
+            <Project
+              maker="Neil Ghosh"
+              name="Dementia Smart Mirror"
+              emojis="🧠🪞👵"
+              query={query}
+            />
+            <Project
+              maker="Neer Vikas Verma"
+              name="Robot Hand"
+              emojis="🦾🤖"
+              query={query}
             />
           </Grid>
-          <Box ml="-10px" mt="8px">
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <AvatarComponent
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-          </Box>
         </Container>
       </Box>
       <Box bg="blue" color="white">

@@ -1,7 +1,7 @@
 import twemoji from 'twemoji'
 import React, { memo } from 'react'
 import { isIOS, isMacOs } from 'react-device-detect'
-const Twemoji = ({ emoji }) => (
+const Emoji = ({ emoji }) => (
   <>
     {!isIOS && !isMacOs ? (
       <>
@@ -32,4 +32,4 @@ const Twemoji = ({ emoji }) => (
   </>
 )
 
-export default memo(Twemoji)
+export default memo(Emoji)
