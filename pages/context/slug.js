@@ -17,6 +17,7 @@ import Project from '../../components/large-list'
 import React, { useState } from 'react'
 import Meta from '../../components/meta'
 import Link from 'next/link'
+import ColorSwitcher from '../../components/color-switcher'
 
 function App() {
   const [query, setQuery] = useState('')
@@ -39,7 +40,7 @@ function App() {
             </Box>
             <Link href="/">
               <Heading
-                sx={{ pt: '16px', textAlign: 'right', cursor: 'pointer' }}
+                sx={{ pt: ['8px', '16px', '16px'], textAlign: ['left', 'right', 'right'], cursor: 'pointer' }}
               >
                 MYP Personal Project Exhibition 2021
               </Heading>
@@ -49,7 +50,7 @@ function App() {
       </Box>
       <Box sx={{minHeight: '100vh'}}>
         <Container py={4}>
-          <Grid columns={[1, 2, 2]}>
+          <Grid columns={[1, 1, 1]}>
             <Box>
               <Text>
                 The global context of <i>identities and relationships</i>{' '}
@@ -57,9 +58,6 @@ function App() {
                 mental, social and spiritual health; human relationships
                 including families, friends, communities and cultures; what it
                 means to be human.
-                <br /> <br />
-                The following projects explore some, if not all of these
-                concepts.
               </Text>
             </Box>
           </Grid>
@@ -76,7 +74,7 @@ function App() {
               my: 3
             }}
           />
-          <Grid columns={3}>
+          <Grid columns={[1, 2, 3]}>
           
             <Project
               maker="Sam Poder"
