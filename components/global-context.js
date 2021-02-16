@@ -8,6 +8,7 @@ let globalContext = ({ name, emoji }) => (
       borderRadius: '8px',
       padding: '16px',
       cursor: 'pointer',
+      
       '&:hover': {
         bg: 'rgba(0, 90, 133, 0.8)',
       },

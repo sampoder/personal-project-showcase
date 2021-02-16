@@ -4,6 +4,7 @@ import Meta from '../components/meta'
 import Emoji from '../components/emoji'
 import ReactPlayer from 'react-player/youtube'
 import { useRouter } from 'next/router'
+import Footer from '../components/footer'
 
 function App(props) {
   const [video, toggleVideo] = useState('0')
@@ -51,6 +52,7 @@ function App(props) {
                 pl: '6px',
                 pr: '6px',
                 mr: '8px',
+                cursor: 'pointer',
               }}
               onClick={() => router.back()}
             >
@@ -116,6 +118,7 @@ function App(props) {
           }}
         />
       </Box>
+      <Footer />
     </Box>
   )
 }

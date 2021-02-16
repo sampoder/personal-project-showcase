@@ -12,6 +12,7 @@ import {
   Close,
   Flex,
 } from 'theme-ui'
+import { contexts } from '../contexts'
 import Intro from '../components/home/intro.mdx'
 import Header from '../components/home/header.js'
 import Footer from '../components/footer.js'
@@ -19,6 +20,7 @@ import GlobalContext from '../components/global-context'
 import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
 import Meta from '../components/meta'
+import Link from 'next/link'
 import Gallery from '../components/home/gallery.js'
 
 function App(props) {
@@ -39,15 +41,9 @@ function App(props) {
         <Container py={4}>
           <Heading>Projects by Global Context</Heading>
           <Grid columns={[1, 2, 3]} pt={3} gap="12px">
-            <GlobalContext emoji="👨‍👩‍👧‍👦" name="Identities and relationships" />
-            <GlobalContext emoji="🕰" name="Orientation in space and time" />
-            <GlobalContext emoji="💃" name="Personal and cultural expression" />
-            <GlobalContext
-              emoji="🔬"
-              name="Scientific and technical innovation"
-            />
-            <GlobalContext emoji="🌏" name="Globalization and sustainability" />
-            <GlobalContext emoji="⚖️" name="Fairness and development" />
+            {contexts.map(context => (
+              <Link href={`/${context.params.slug}`}><GlobalContext emoji={context.params.emoji} name={context.params.name} /></Link>
+            ))}
           </Grid>
         </Container>
       </Box>

@@ -15,40 +15,51 @@ import {
 import GlobalContext from '../../components/global-context'
 import Project from '../../components/large-list'
 import React, { useState } from 'react'
+import Footer from '../../components/footer'
 import Meta from '../../components/meta'
 import Link from 'next/link'
 import { contexts } from '../../contexts'
 
-function App() {
+function App(props) {
   const [query, setQuery] = useState('')
   const [highlightedImage, setHighlightedImage] = useState('')
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
       <Meta
-        title="Identities and Relationships Projects"
+        title={`${props.context.params.name} Projects`}
         name="MYP Personal Project Exhibition 2021"
       />
       <Box bg="blue" color="white">
         <Container py={3}>
           <Grid columns={[1, 2, 2]} gap="12px">
-            <Box>
-              <GlobalContext
-                style={{ width: 'auto' }}
-                emoji="👨‍👩‍👧‍👦"
-                name="Identities and relationships"
-              />
-            </Box>
             <Link href="/">
               <Heading
                 sx={{
                   pt: ['8px', '16px', '16px'],
-                  textAlign: ['left', 'right', 'right'],
+                  textAlign: ['left', 'left', 'left'],
                   cursor: 'pointer',
                 }}
               >
                 MYP Personal Project Exhibition 2021
               </Heading>
             </Link>
+            <Box>
+              <Box
+                style={{
+                  width: 'auto',
+                  display: 'flex',
+                  justifyContent: 'right',
+                  textAlign: 'right',
+                }}
+              >
+                <Box sx={{ marginLeft: 'auto', marginRight: '0' }}>
+                  <GlobalContext
+                    emoji={props.context.params.emoji}
+                    name={`${props.context.params.name}`}
+                  />
+                </Box>
+              </Box>
+            </Box>
           </Grid>
         </Container>
       </Box>
@@ -79,189 +90,21 @@ function App() {
             }}
           />
           <Grid columns={[1, 2, 3]}>
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
-            <Project
-              maker="Sam Poder"
-              name="Climatator"
-              emojis="🌏🔥🥽"
-              query={query}
-            />
-            <Project
-              maker="Arsh Shrivastava"
-              name="Kid-friendly Stock Simulator"
-              emojis="💰📈"
-              query={query}
-            />
-            <Project
-              maker="Neil Ghosh"
-              name="Dementia Smart Mirror"
-              emojis="🧠🪞👵"
-              query={query}
-            />
-            <Project
-              maker="Neer Vikas Verma"
-              name="Robot Hand"
-              emojis="🦾🤖"
-              query={query}
-            />
+            {props.data.map(project => (
+              <Project
+                key={project.fields['Record ID']}
+                maker={project.fields['Student Name']}
+                name={project.fields['Project Name']}
+                emojis={project.fields['3 Emoji Desc']}
+                yt={project.fields['Youtube ID']}
+                slug={project.slug}
+                query={query}
+              />
+            ))}
           </Grid>
         </Container>
       </Box>
-      <Box bg="blue" color="white">
-        <Container py={4}>
-          <Grid columns={2}>
-            <Heading sx={{ fontSize: '18px' }}>
-              MYP Personal Project Exhibition 2021
-            </Heading>
-            <Heading
-              sx={{ fontSize: '16px', fontWeight: '400', textAlign: 'right' }}
-            >
-              Website by{' '}
-              <a
-                href="https://github.com/sampoder"
-                style={{
-                  color: 'white',
-                  fontWeight: '600',
-                  textDecoration: 'none',
-                }}
-              >
-                @sampoder
-              </a>
-              , open sourced{' '}
-              <a
-                href="https://github.com/sampoder/personal-project-showcase"
-                style={{
-                  color: 'white',
-                  fontWeight: '600',
-                  textDecoration: 'none',
-                }}
-              >
-                here
-              </a>
-              .
-            </Heading>
-          </Grid>
-        </Container>
-      </Box>
+      <Footer />{' '}
       <style>
         {`
         
@@ -287,6 +130,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   var lodash = require('lodash')
   const AirtablePlus = require('airtable-plus')
+  var GithubSlugger = require('github-slugger')
 
   const airtable = new AirtablePlus({
     baseID: process.env.AIRTABLE_BASE,
@@ -298,13 +142,24 @@ export async function getStaticProps({ params }) {
     contexts,
     data => data.params.slug === params.slug,
   )[0]
-  const res = await airtable.read({
-    filterByFormula: `{Global Context} = "${path.params.name}"`,
-  })
-  console.log(res)
+
+  var slugger = new GithubSlugger()
+
+  let res = (await airtable.read({})).map(data => ({
+    id: data.id,
+    fields: data.fields,
+    slug: slugger.slug(data.fields['Student Name']),
+  }))
+
+  res = lodash.filter(
+    res,
+    data => data.fields['Global Context'] === path.params.name,
+  )
+
   return {
     props: {
       data: res,
+      context: path,
     },
   }
 }
