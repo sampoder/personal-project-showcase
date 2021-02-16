@@ -70,6 +70,7 @@ const Meta = ({
       href={`${url}/favicon-16x16.png`}
     />
     <link key="manifest" rel="manifest" href={`${url}/site.webmanifest`} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     {children}
   </Head>
 )

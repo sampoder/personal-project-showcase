@@ -5,6 +5,7 @@ import Emoji from '../components/emoji'
 import ReactPlayer from 'react-player/youtube'
 import { useRouter } from 'next/router'
 import Footer from '../components/footer'
+import { Animated } from 'react-animated-css'
 
 function App(props) {
   const [video, toggleVideo] = useState('0')
@@ -12,89 +13,94 @@ function App(props) {
   return (
     <Box p={0} sx={{ width: '100%' }} m={0}>
       <Meta />
-
-      <Box
-        sx={{
-          background: `linear-gradient(
+      <Animated
+        animationIn="fadeIn"
+        animationOut="fadeOut"
+        isVisible={true}
+        animationInDuration={200}
+      >
+        <Box
+          sx={{
+            background: `linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.94),
       rgba(0, 0, 0, 0.74)
     ),url(https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg)`,
-          backgroundSize: 'cover',
-          color: 'white',
-          fontSize: '1.3rem!important',
-          width: '100%',
-          backgroundPosition: 'center',
-          height: '100vh',
-          display: video != '1' ? 'default' : 'none',
-        }}
-      >
-        <Container py={4} pt={6}>
-          <Box
-            ml="0px"
-            mb="4px"
-            sx={{
-              width: 'max-content',
-              verticalAlign: 'middle',
-              borderRadius: '8px',
-              fontSize: '36px',
-            }}
-          >
+            backgroundSize: 'cover',
+            color: 'white',
+            fontSize: '1.3rem!important',
+            width: '100%',
+            backgroundPosition: 'center',
+            height: '100vh',
+            display: video != '1' ? 'default' : 'none',
+          }}
+        >
+          <Container py={4} pt={6}>
+            <Box
+              ml="0px"
+              mb="4px"
+              sx={{
+                width: 'max-content',
+                verticalAlign: 'middle',
+                borderRadius: '8px',
+                fontSize: '36px',
+              }}
+            >
+              <Heading
+                sx={{
+                  bg: 'white',
+                  color: 'black',
+                  borderRadius: '8px',
+                  fontSize: '0.5em',
+                  p: '4px',
+                  pb: '5px',
+                  verticalAlign: '8px',
+                  pl: '6px',
+                  display: 'inline-block',
+                  pr: '6px',
+                  mr: '8px',
+                  cursor: 'pointer',
+                }}
+                onClick={() => router.back()}
+              >
+                {'< Back'}
+              </Heading>
+              <Emoji emoji={props.data['fields']['3 Emoji Desc']} />
+            </Box>
             <Heading
               sx={{
-                bg: 'white',
-                color: 'black',
-                borderRadius: '8px',
-                fontSize: '0.5em',
-                p: '4px',
-                pb: '5px',
-                verticalAlign: '8px',
-                pl: '6px',
-                display: 'inline-block',
-                pr: '6px',
-                mr: '8px',
-                cursor: 'pointer',
+                fontSize: ['2.3rem', '4rem', '4rem'],
+                marginBottom: '16px',
+                maxWidth: '600px',
               }}
-              onClick={() => router.back()}
             >
-              {'< Back'}
+              {props.data['fields']['Project Name']}
             </Heading>
-            <Emoji emoji={props.data['fields']['3 Emoji Desc']} />
-          </Box>
-          <Heading
-            sx={{
-              fontSize: ['2.3rem', '4rem', '4rem'],
-              marginBottom: '16px',
-              maxWidth: '600px',
-            }}
-          >
-            {props.data['fields']['Project Name']}
-          </Heading>
-          <Text
-            sx={{
-              fontSize: '1.3rem!important',
-              fontWeight: '600',
-              marginTop: '0px',
-              paddingTop: '0px',
-              lineHeight: '1.8',
-            }}
-          >
-            {' '}
-            Created by: {props.data['fields']['Student Name']}
-            <br />
-            Global Context: {props.data['fields']['Global Context']}
-            <br />
-            <Button
-              mt="12px"
-              onClick={() => toggleVideo('1')}
-              sx={{ lineHeight: '1.3' }}
+            <Text
+              sx={{
+                fontSize: '1.3rem!important',
+                fontWeight: '600',
+                marginTop: '0px',
+                paddingTop: '0px',
+                lineHeight: '1.8',
+              }}
             >
-              {video != '0.1' ? 'Play Demo' : 'Resume Demo'}
-            </Button>
-          </Text>
-        </Container>
-      </Box>
-
+              {' '}
+              Created by: {props.data['fields']['Student Name']}
+              <br />
+              Global Context: {props.data['fields']['Global Context']}
+              <br />
+              <Button
+                mt="12px"
+                onClick={() => toggleVideo('1')}
+                sx={{ lineHeight: '1.3' }}
+              >
+                {video != '0.1' ? 'Play Demo' : 'Resume Demo'}
+              </Button>
+            </Text>
+          </Container>
+        </Box>
+      </Animated>
       <Box
         onClick={() => toggleVideo('0.1')}
         sx={{ display: video != '1' ? 'none' : 'default' }}

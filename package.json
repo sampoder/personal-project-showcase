@@ -17,6 +17,7 @@
     "lodash": "^4.17.20",
     "next": "^10.0.6",
     "react": "^17.0.1",
+    "react-animated-css": "^1.2.1",
     "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",
     "react-player": "^2.8.2",
