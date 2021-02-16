@@ -125,7 +125,7 @@ function App(props) {
           }}
         />
       </Box>
-      {back ? <Footer /> : ''}
+      {!back ? <Footer /> : ''}
     </Box>
   )
 }
