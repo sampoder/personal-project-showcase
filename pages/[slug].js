@@ -40,7 +40,7 @@ function App(props) {
               fontSize: '36px',
             }}
           >
-            <Text
+            <Heading
               sx={{
                 bg: 'white',
                 color: 'black',
@@ -50,14 +50,15 @@ function App(props) {
                 pb: '5px',
                 verticalAlign: '8px',
                 pl: '6px',
+                display: 'inline-block',
                 pr: '6px',
                 mr: '8px',
                 cursor: 'pointer',
               }}
               onClick={() => router.back()}
             >
-              {'❮ Back'}
-            </Text>
+              {'< Back'}
+            </Heading>
             <Emoji emoji={props.data['fields']['3 Emoji Desc']} />
           </Box>
           <Heading

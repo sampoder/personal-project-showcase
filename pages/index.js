@@ -42,7 +42,7 @@ function App(props) {
           <Heading>Projects by Global Context</Heading>
           <Grid columns={[1, 2, 3]} pt={3} gap="12px">
             {contexts.map(context => (
-              <Link href={`/${context.params.slug}`}><GlobalContext emoji={context.params.emoji} name={context.params.name} /></Link>
+              <Link href={`context/${context.params.slug}`}><GlobalContext emoji={context.params.emoji} name={context.params.name} /></Link>
             ))}
           </Grid>
         </Container>
