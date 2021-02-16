@@ -17,7 +17,6 @@ function App(props) {
         animationIn="fadeIn"
         animationOut="fadeOut"
         isVisible={true}
-        animationInDuration={200}
       >
         <Box
           sx={{
