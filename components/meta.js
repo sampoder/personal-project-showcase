@@ -5,8 +5,8 @@ const makeTitle = (title, name) =>
   title === name ? title : `${title} – ${name}`
 
 const Meta = ({
-  title = 'MYP Personal Project Exhibition 2021', // page title
-  name = '', // site name
+  title = 'Home', // page title
+  name = 'MYP Personal Project Exhibition 2021', // site name
   description = '', // page description
   image = '', // social card image URL
   url = 'https://personal-project-showcase.vercel.app',

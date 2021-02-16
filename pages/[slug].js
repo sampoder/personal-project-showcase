@@ -105,13 +105,13 @@ function App(props) {
           playing={video == '1' ? true : false}
           style={{ pointerEvents: 'none' }}
           url={`https://www.youtube.com/watch?v=${props.data['fields']['Youtube ID']}`}
-          onClick={() => toggleVideo(false)}
+          onClick={() => toggleVideo('0.1')}
           onEnded={() => toggleVideo('0')}
           config={{
             youtube: {
               playerVars: {
                 showinfo: 0,
-                autoplay: 1,
+                autoplay: 0,
                 modestbranding: 1,
                 rel: 0,
               },
