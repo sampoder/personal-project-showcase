@@ -9,7 +9,7 @@ const Meta = ({
   name = 'MYP Personal Project Exhibition 2021', // site name
   description = '', // page description
   image = 'https://cloud-8ik5agek7.vercel.app/0myp_personal_project.png', // social card image URL
-  url = 'https://personal-project-showcase.vercel.app',
+  url = 'http://pps-draft.sampoder.com/',
   children,
 }) => (
   <Head>
