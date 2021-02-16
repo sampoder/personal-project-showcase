@@ -47,7 +47,7 @@ function App(props) {
               name="Scientific and technical innovation"
             />
             <GlobalContext emoji="🌏" name="Globalization and sustainability" />
-            <GlobalContext emoji="👨‍👩‍👧‍👦" name="Fairness and development" />
+            <GlobalContext emoji="⚖️" name="Fairness and development" />
           </Grid>
         </Container>
       </Box>

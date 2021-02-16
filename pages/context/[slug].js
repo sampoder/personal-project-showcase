@@ -17,7 +17,7 @@ import Project from '../../components/large-list'
 import React, { useState } from 'react'
 import Meta from '../../components/meta'
 import Link from 'next/link'
-import ColorSwitcher from '../../components/color-switcher'
+import { contexts } from '../../contexts'
 
 function App() {
   const [query, setQuery] = useState('')
@@ -40,7 +40,11 @@ function App() {
             </Box>
             <Link href="/">
               <Heading
-                sx={{ pt: ['8px', '16px', '16px'], textAlign: ['left', 'right', 'right'], cursor: 'pointer' }}
+                sx={{
+                  pt: ['8px', '16px', '16px'],
+                  textAlign: ['left', 'right', 'right'],
+                  cursor: 'pointer',
+                }}
               >
                 MYP Personal Project Exhibition 2021
               </Heading>
@@ -48,7 +52,7 @@ function App() {
           </Grid>
         </Container>
       </Box>
-      <Box sx={{minHeight: '100vh'}}>
+      <Box sx={{ minHeight: '100vh' }}>
         <Container py={4}>
           <Grid columns={[1, 1, 1]}>
             <Box>
@@ -71,11 +75,10 @@ function App() {
               '::placeholder': {
                 color: 'muted',
               },
-              my: 3
+              my: 3,
             }}
           />
           <Grid columns={[1, 2, 3]}>
-          
             <Project
               maker="Sam Poder"
               name="Climatator"
@@ -273,3 +276,35 @@ function App() {
 }
 
 export default App
+
+export async function getStaticPaths() {
+  return {
+    paths: contexts,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  var lodash = require('lodash')
+  const AirtablePlus = require('airtable-plus')
+
+  const airtable = new AirtablePlus({
+    baseID: process.env.AIRTABLE_BASE,
+    apiKey: process.env.AIRTABLE_TOKEN,
+    tableName: 'Students',
+  })
+
+  const path = lodash.filter(
+    contexts,
+    data => data.params.slug === params.slug,
+  )[0]
+  const res = await airtable.read({
+    filterByFormula: `{Global Context} = "${path.params.name}"`,
+  })
+  console.log(res)
+  return {
+    props: {
+      data: res,
+    },
+  }
+}

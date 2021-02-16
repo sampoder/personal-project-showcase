@@ -38,7 +38,7 @@ let avatarList = ({
   >
     <Box
       sx={{
-        height: '175px',
+        height: '200px',
         pt: '16px',
         borderRadius: '8px',
         background:
@@ -46,35 +46,47 @@ let avatarList = ({
         backgroundSize: 'cover',
       }}
     >
-      <Box
-        ml="16px"
-        p="8px"
-        sx={{
-          bg: 'white',
-          width: 'max-content',
-          verticalAlign: 'middle',
-          borderRadius: '8px',
-          fontSize: '16px',
-        }}
-      >
-        <Emoji emoji={emojis} />
+      <Box sx={{ display: 'flex', height: '25%', alignItems: 'flex-start' }}>
+        <Box
+          ml="16px"
+          p="8px"
+          sx={{
+            bg: 'rgba(0, 0, 0, 0.50)',
+            color: 'black',
+            width: 'max-content',
+            verticalAlign: 'middle',
+            borderRadius: '8px',
+            fontSize: '16px',
+            lineHeight: '1.6',
+            p: '8px 12px',
+            width: 'max-content',
+          }}
+        >
+          <Emoji emoji={emojis} />
+        </Box>
       </Box>
-    </Box>
-
-    <Box pt="4px" pb="4px" pr="8px" pl="8px" m="8px">
-      <Text
-        sx={{
-          verticalAlign: 'middle',
-          fontSize: ['16px', '14px', '14px'],
-        }}
-      >
-        <Text sx={{ fontWeight: '700' }}>{name}</Text>{' '}
-        <Text sx={{ fontWeight: '500' }}>(by {maker})</Text>
-        <Text sx={{ paddingTop: '4px' }} as="p">
-          {desc.slice(0, 100)}
-          {desc.length > 100 ? '...' : ''}
-        </Text>
-      </Text>
+      <Box sx={{ display: 'flex', height: '75%', alignItems: 'flex-end' }}>
+        <Box sx={{ pb: '8px', width: 'calc(100%)' }}>
+          <Box
+            ml="16px"
+            p="8px"
+            sx={{
+              bg: 'rgba(0, 0, 0, 0.50)',
+              color: 'white',
+              width: 'max-content',
+              verticalAlign: 'middle',
+              borderRadius: '8px',
+              fontSize: '16px',
+              lineHeight: '1.6',
+              p: '8px 12px',
+              width: 'calc(100% - 16px - 16px)',
+            }}
+          >
+            <Text sx={{ fontWeight: '700' }}>{name}</Text> <br />
+            <Text sx={{ fontWeight: '400' }}>{maker}</Text>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   </Box>
 )
