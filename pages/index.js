@@ -20,7 +20,6 @@ import GlobalContext from '../components/global-context'
 import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
 import Meta from '../components/meta'
-import Link from 'next/link'
 import Gallery from '../components/home/gallery.js'
 
 function App(props) {
@@ -42,7 +41,11 @@ function App(props) {
           <Heading>Projects by Global Context</Heading>
           <Grid columns={[1, 2, 3]} pt={3} gap="12px">
             {contexts.map(context => (
-              <Link href={`context/${context.params.slug}`}><GlobalContext emoji={context.params.emoji} name={context.params.name} /></Link>
+              <GlobalContext
+                slug={context.params.slug}
+                emoji={context.params.emoji}
+                name={context.params.name}
+              />
             ))}
           </Grid>
         </Container>
