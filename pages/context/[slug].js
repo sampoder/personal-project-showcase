@@ -52,7 +52,9 @@ function App(props) {
                   textAlign: 'right',
                 }}
               >
-                <Box sx={{ marginLeft: 'auto', marginRight: '0' }}>
+                <Box
+                  sx={{ marginLeft: ['0', 'auto', 'auto'], marginRight: '0' }}
+                >
                   <GlobalContext
                     emoji={props.context.params.emoji}
                     name={`${props.context.params.name}`}
