@@ -17,7 +17,10 @@ function App(props) {
   }
   return (
     <Box p={0} sx={{ width: '100%', bg: 'black' }} m={0}>
-      <Meta title={`${props.data['fields']['Project Name']}`} />
+      <Meta
+        image={`https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg`}
+        title={`${props.data['fields']['Project Name']}`}
+      />
       <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
         <Box
           sx={{
