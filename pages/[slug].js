@@ -9,15 +9,16 @@ import { Animated } from 'react-animated-css'
 
 function App(props) {
   const [video, toggleVideo] = useState('0')
+  const [back, toggleBack] = useState(false)
   const router = useRouter()
+  function headBack() {
+    toggleBack(true)
+    router.back()
+  }
   return (
-    <Box p={0} sx={{ width: '100%' }} m={0}>
-      <Meta />
-      <Animated
-        animationIn="fadeIn"
-        animationOut="fadeOut"
-        isVisible={true}
-      >
+    <Box p={0} sx={{ width: '100%', bg: 'black' }} m={0}>
+      <Meta title={`${props.data['fields']['Project Name']}`} />
+      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
         <Box
           sx={{
             background: `linear-gradient(
@@ -60,7 +61,7 @@ function App(props) {
                   mr: '8px',
                   cursor: 'pointer',
                 }}
-                onClick={() => router.back()}
+                onClick={() => headBack()}
               >
                 {'< Back'}
               </Heading>
@@ -124,7 +125,7 @@ function App(props) {
           }}
         />
       </Box>
-      <Footer />
+      {back ? <Footer /> : ''}
     </Box>
   )
 }
