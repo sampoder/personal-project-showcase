@@ -163,5 +163,6 @@ export async function getStaticProps({ params }) {
       data: res,
       context: path,
     },
+    revalidate: 30
   }
 }
