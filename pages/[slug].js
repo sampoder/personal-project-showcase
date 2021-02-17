@@ -167,22 +167,29 @@ export async function getStaticProps({ params }) {
   })
 
   var slugger = new GithubSlugger()
-  const path = lodash.filter(
-    (await airtable.read({})).map(data => ({
-      params: {
-        slug: slugger.slug(data.fields['Student Name']),
-        id: data.id,
+  try {
+    const path = lodash.filter(
+      (await airtable.read({})).map(data => ({
+        params: {
+          slug: slugger.slug(data.fields['Student Name']),
+          id: data.id,
+        },
+      })),
+      path => path.params.slug === params.slug,
+    )[0]
+    const res = await airtable.find(path.params.id)
+    console.log(res)
+    return {
+      props: {
+        data: res,
       },
-    })),
-    path => path.params.slug === params.slug,
-  )[0]
-  const res = await airtable.find(path.params.id)
-  console.log(res)
-  return {
-    props: {
-      data: res,
-    },
-    revalidate: 30
+      revalidate: 30,
+    }
+  } catch(e) {
+    console.log(e)
+    return {
+      notFound: true,
+    }
   }
 }
 
