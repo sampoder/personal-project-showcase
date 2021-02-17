@@ -187,7 +187,7 @@ export async function getStaticProps({ params }) {
         data: res,
       },
       revalidate: 30,
-      notFound: typeof res.id > 0 ? false : true,
+      notFound: typeof res.id == "undefined" ? true : false,
     }
   } catch (e) {
     console.log(e)
