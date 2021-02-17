@@ -8,6 +8,9 @@ import Footer from '../components/footer'
 import { Animated } from 'react-animated-css'
 
 function App(props) {
+  if(!props.data){
+    return <Text>404</Text>
+  }
   const [video, toggleVideo] = useState('0')
   const [back, toggleBack] = useState(false)
   const router = useRouter()
@@ -179,8 +182,8 @@ export async function getStaticProps({ params }) {
       })),
       path => path.params.slug === params.slug,
     )[0]
+
     const res = await airtable.find(path.params.id)
-    console.log(res)
 
     return {
       props: {
