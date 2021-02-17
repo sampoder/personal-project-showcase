@@ -171,7 +171,9 @@ export async function getStaticProps({ params }) {
     const path = lodash.filter(
       (await airtable.read({})).map(data => ({
         params: {
-          slug: slugger.slug(data ? data.fields['Student Name'] : '404'),
+          slug: slugger.slug(
+            typeof data != 'undefined' ? data.fields['Student Name'] : '404',
+          ),
           id: data.id,
         },
       })),
@@ -179,17 +181,17 @@ export async function getStaticProps({ params }) {
     )[0]
     const res = await airtable.find(path.params.id)
     console.log(res)
+
     return {
       props: {
         data: res,
       },
       revalidate: 30,
+      notFound: res.length > 0 ? false : true,
     }
   } catch (e) {
     console.log(e)
-    return {
-      notFound: true,
-    }
+    return {}
   }
 }
 
