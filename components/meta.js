@@ -69,6 +69,11 @@ const Meta = ({
       sizes="16x16"
       href={`${url}/favicon-16x16.png`}
     />
+    <link
+      key="favicon"
+      rel="icon"
+      href={`${url}/favicon.ico`}
+    />
     <link key="manifest" rel="manifest" href={`${url}/site.webmanifest`} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     {children}
