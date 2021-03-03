@@ -95,8 +95,8 @@ function App(props) {
             {props.data.map(project => (
               <Project
                 key={project.fields['Record ID']}
-                maker={project.fields['Student Name']}
-                name={project.fields['Project Name']}
+                maker={title(project.fields['Student Name'])}
+                name={title(project.fields['Project Name'])}
                 emojis={project.fields['3 Emoji Desc']}
                 yt={project.fields['Youtube ID']}
                 slug={project.slug}

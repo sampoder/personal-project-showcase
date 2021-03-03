@@ -80,7 +80,7 @@ function App(props) {
                 maxWidth: '600px',
               }}
             >
-              {props.data['fields']['Project Name']}
+              {title(props.data['fields']['Project Name'])}
             </Heading>
             <Text
               sx={{
@@ -92,9 +92,9 @@ function App(props) {
               }}
             >
               {' '}
-              Created by: {props.data['fields']['Student Name']}
+              Created by: {title(props.data['fields']['Student Name'])}
               <br />
-              Global Context: {props.data['fields']['Global Context']}
+              Global Context: {title(props.data['fields']['Global Context'])}
               <br />
               <Button
                 mt="12px"

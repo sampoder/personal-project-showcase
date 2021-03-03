@@ -21,6 +21,7 @@ import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
 import Meta from '../components/meta'
 import Gallery from '../components/home/gallery.js'
+import title from 'title'
 
 function App(props) {
   const [query, setQuery] = useState('')
@@ -44,7 +45,7 @@ function App(props) {
               <GlobalContext
                 slug={context.params.slug}
                 emoji={context.params.emoji}
-                name={context.params.name}
+                name={title(context.params.name)}
               />
             ))}
           </Grid>
@@ -71,8 +72,8 @@ function App(props) {
             {props.data.map(project => (
               <AvatarComponent
                 key={project.fields['Record ID']}
-                maker={project.fields['Student Name']}
-                name={project.fields['Project Name']}
+                maker={title(project.fields['Student Name'])}
+                name={title(project.fields['Project Name'])}
                 emojis={project.fields['3 Emoji Desc']}
                 slug={project.slug}
                 query={query}
