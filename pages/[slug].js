@@ -6,6 +6,7 @@ import ReactPlayer from 'react-player/youtube'
 import { useRouter } from 'next/router'
 import Footer from '../components/footer'
 import { Animated } from 'react-animated-css'
+import title from 'title'
 
 function App(props) {
   if(!props.data){

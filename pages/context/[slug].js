@@ -19,6 +19,7 @@ import Footer from '../../components/footer'
 import Meta from '../../components/meta'
 import Link from 'next/link'
 import { contexts } from '../../contexts'
+import title from 'title'
 
 function App(props) {
   const [query, setQuery] = useState('')
