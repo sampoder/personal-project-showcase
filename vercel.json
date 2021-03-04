@@ -2,6 +2,7 @@
   "public": true,
   "github": { "silent": true },
   "redirects": [
-    { "source": "/new", "destination": "https://airtable.com/shrxGtjZ5qayJnhmR" }
+    { "source": "/new", "destination": "https://airtable.com/shrxGtjZ5qayJnhmR" },
+    { "source": "/add-a-link", "destination": "https://airtable.com/shrUQgLNWN4wKcLor" }
   ]
 }
