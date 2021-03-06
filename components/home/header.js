@@ -7,7 +7,7 @@ let header = () => (
                   0deg,
                   rgba(0, 0, 0, 0.74),
                   rgba(0, 0, 0, 0.64)
-                  ),url(https://i.gifer.com/HseP.gif)`,
+                  ),url(https://cloud-46pddfenw-hack-club-bot.vercel.app/0ezgif-2-c21a68f0957c.gif)`,
       backgroundSize: 'cover',
       color: 'white',
       fontSize: '1.3rem!important',
