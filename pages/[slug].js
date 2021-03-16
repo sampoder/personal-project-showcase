@@ -107,6 +107,7 @@ function App(props) {
               <br />
               <Button
                 mt="12px"
+                mr="12px"
                 onClick={() => toggleVideo('1')}
                 sx={{ lineHeight: '1.3' }}
               >
@@ -115,7 +116,6 @@ function App(props) {
               {props.data['fields']['Web URL'] ? (
                 <Button
                   mt="12px"
-                  ml="12px"
                   as="a"
                   href={props.data['fields']['Web URL']}
                   sx={{ lineHeight: '1.3' }}
