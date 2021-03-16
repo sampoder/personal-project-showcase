@@ -46,9 +46,9 @@ function App(props) {
             </Link>
             <Box>
               <Box
-                style={{
+                sx={{
                   width: 'auto',
-                  display: 'flex',
+                  display: ['none', 'flex', 'flex'],
                   justifyContent: 'right',
                   textAlign: 'right',
                 }}
@@ -71,11 +71,9 @@ function App(props) {
           <Grid columns={[1, 1, 1]}>
             <Box>
               <Text>
-                The global context of <i>identities and relationships</i>{' '}
-                explores identity; beliefs and values; personal, physical,
-                mental, social and spiritual health; human relationships
-                including families, friends, communities and cultures; what it
-                means to be human.
+                The global context of{' '}
+                <i>{`${props.context.params.name.toLowerCase()}`}</i>{' '}
+                {`${props.context.params.desc}`}
               </Text>
             </Box>
           </Grid>
@@ -165,6 +163,6 @@ export async function getStaticProps({ params }) {
       data: res,
       context: path,
     },
-    revalidate: 30
+    revalidate: 30,
   }
 }
