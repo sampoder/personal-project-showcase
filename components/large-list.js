@@ -17,6 +17,7 @@ let avatarList = ({
   name,
   emojis,
   query,
+  override,
   yt,
   slug,
   desc = 'I built a very wonderful thing that many people love and really was amazing to build and I felt so so great when i showcased it',
@@ -28,7 +29,7 @@ let avatarList = ({
         '&:hover': {
           bg: 'rgba(14, 144, 219, 0.4)',
           transform: 'scale(1.02)',
-          transition: '0.5s ease'
+          transition: '0.5s ease',
         },
         cursor: 'pointer',
         borderRadius: '8px',
@@ -48,8 +49,11 @@ let avatarList = ({
           height: '200px',
           pt: '16px',
           borderRadius: '8px',
-          background:
-            `url(https://i.ytimg.com/vi/${yt}/maxresdefault.jpg)`,
+          background: `url(${
+            override
+              ? override
+              : `https://i.ytimg.com/vi/${yt}/maxresdefault.jpg`
+          })`,
           backgroundSize: 'cover',
         }}
       >

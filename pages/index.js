@@ -21,7 +21,7 @@ import AvatarComponent from '../components/avatar-list'
 import React, { useState } from 'react'
 import Meta from '../components/meta'
 import Gallery from '../components/home/gallery.js'
-import title from 'title'
+import title from '../lib/title'
 
 function App(props) {
   const [query, setQuery] = useState('')
@@ -102,7 +102,9 @@ export async function getStaticProps() {
 
   var slugger = new GithubSlugger()
 
-  const data = (await airtable.read({})).map(data => ({
+  const data = (
+    await airtable.read({ sort: [{ field: 'Order', direction: 'asc' }] })
+  ).map(data => ({
     id: data.id,
     fields: data.fields,
     slug: slugger.slug(data.fields['Student Name']),
@@ -114,7 +116,7 @@ export async function getStaticProps() {
     props: {
       data,
     },
-    revalidate: 30
+    revalidate: 30,
   }
 }
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function final({ name, emoji, slug }) {
   return (
-    <Box>
+    <Box key={name}>
       {slug ? (
         <Link href={`context/${slug}`}>
           <Box

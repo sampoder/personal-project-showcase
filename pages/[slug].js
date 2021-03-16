@@ -6,10 +6,10 @@ import ReactPlayer from 'react-player/youtube'
 import { useRouter } from 'next/router'
 import Footer from '../components/footer'
 import { Animated } from 'react-animated-css'
-import title from 'title'
+import title from '../lib/title'
 
 function App(props) {
-  if(!props.data){
+  if (!props.data) {
     return <Text>404</Text>
   }
   const [video, toggleVideo] = useState('0')
@@ -22,17 +22,25 @@ function App(props) {
   return (
     <Box p={0} sx={{ width: '100%', bg: 'black' }} m={0}>
       <Meta
-        image={`https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg`}
+        image={
+          props.data['fields']['Photo Override']
+            ? props.data['fields']['Photo Override']
+            : `https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg`
+        }
         title={`${props.data['fields']['Project Name']}`}
       />
       <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
         <Box
           sx={{
             background: `linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.94),
-      rgba(0, 0, 0, 0.74)
-    ),url(https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg)`,
+              0deg,
+              rgba(0, 0, 0, 0.94),
+              rgba(0, 0, 0, 0.74)
+            ),url(${
+              props.data['fields']['Photo Override']
+                ? props.data['fields']['Photo Override']
+                : `https://i.ytimg.com/vi/${props.data['fields']['Youtube ID']}/maxresdefault.jpg`
+            })`,
             backgroundSize: 'cover',
             color: 'white',
             fontSize: '1.3rem!important',
@@ -104,6 +112,19 @@ function App(props) {
               >
                 {video != '0.1' ? 'Play Demo' : 'Resume Demo'}
               </Button>
+              {props.data['fields']['Web URL'] ? (
+                <Button
+                  mt="12px"
+                  ml="12px"
+                  as="a"
+                  href={props.data['fields']['Web URL']}
+                  sx={{ lineHeight: '1.3' }}
+                >
+                  Learn More
+                </Button>
+              ) : (
+                ''
+              )}
             </Text>
           </Container>
         </Box>
@@ -191,7 +212,7 @@ export async function getStaticProps({ params }) {
         data: res,
       },
       revalidate: 30,
-      notFound: typeof res.id == "undefined" ? true : false,
+      notFound: typeof res.id == 'undefined' ? true : false,
     }
   } catch (e) {
     console.log(e)

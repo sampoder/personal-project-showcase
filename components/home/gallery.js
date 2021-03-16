@@ -32,7 +32,7 @@ export default function gallery() {
         gap={24}
       >
         <Image
-          src="/1.jpg"
+          src="https://cloud-k8e1qgdog-hack-club-bot.vercel.app/0img_20210303_121530.jpg"
           width="100%"
           onClick={() => setHighlightedImage(1)}
           sx={{
@@ -55,7 +55,7 @@ export default function gallery() {
           }}
         />
         <Image
-          src="https://images.unsplash.com/photo-1440423226932-e7096a66f1c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+          src="https://cloud-5as5oy7wo-hack-club-bot.vercel.app/0gwa00115.jpg"
           width="100%"
           onClick={() => setHighlightedImage(2)}
           sx={{
@@ -78,7 +78,7 @@ export default function gallery() {
           }}
         />
         <Image
-          src="https://images.unsplash.com/photo-1559727801-763c7c950494?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+          src="https://cloud-13rfbxxig-hack-club-bot.vercel.app/0gwa00041.jpg"
           width="100%"
           onClick={() => setHighlightedImage(3)}
           sx={{
@@ -101,7 +101,7 @@ export default function gallery() {
           }}
         />
         <Image
-          src="https://images.unsplash.com/photo-1584612924768-54be89e74165?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
+          src="https://cloud-iehty0x6o-hack-club-bot.vercel.app/0gwa00107.jpg"
           width="100%"
           onClick={() => setHighlightedImage(4)}
           sx={{

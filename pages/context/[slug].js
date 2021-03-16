@@ -19,7 +19,7 @@ import Footer from '../../components/footer'
 import Meta from '../../components/meta'
 import Link from 'next/link'
 import { contexts } from '../../contexts'
-import title from 'title'
+import title from '../../lib/title'
 
 function App(props) {
   const [query, setQuery] = useState('')
@@ -101,6 +101,7 @@ function App(props) {
                 emojis={project.fields['3 Emoji Desc']}
                 yt={project.fields['Youtube ID']}
                 slug={project.slug}
+                override={project.fields['Photo Override']}
                 query={query}
               />
             ))}
