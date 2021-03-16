@@ -29,13 +29,6 @@ export const contexts = [
   },
   {
     params: {
-      slug: 'orientation-in-space-and-time',
-      name: 'Orientation in space and time',
-      emoji: '🕰',
-    },
-  },
-  {
-    params: {
       slug: 'identities-and-relationships',
       name: 'Identities and relationships',
       emoji: '👨‍👩‍👧‍👦',
