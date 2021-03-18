@@ -19,7 +19,7 @@ let footer = () => (
               textDecoration: 'none',
             }}
           >
-            @sampoder
+            GEMS Media Crew
           </a>
           , open sourced{' '}
           <a
