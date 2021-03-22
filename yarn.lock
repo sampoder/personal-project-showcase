@@ -633,75 +633,75 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.4"
 
-"@theme-ui/color-modes@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/color-modes/-/color-modes-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#cf816a025a2b7b1ecfb5c163c96a44f54cec8729"
-  integrity sha512-7wKlpcKfbpT7omiVm7nc7fFES042wG7xrTpwQcIg6wa3MRl+ZXIE/27IHomzSacPafZUPfynsIOCGejC8ru+jw==
+"@theme-ui/color-modes@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/color-modes/-/color-modes-0.6.0.tgz#bf90bef2fca72e5af6b4ac54dd0001117592357d"
+  integrity sha512-vqCTp3oxHP0rQrr0rlneEKkvzYlxJWrc1IhJH5CG5/nrdPEKIqnNFH2YK/ImKdA2HcJ/222WqrhMa2CaBQmWPA==
   dependencies:
     "@emotion/react" "^11.1.1"
-    "@theme-ui/core" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-    "@theme-ui/css" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/core" "^0.6.0"
+    "@theme-ui/css" "^0.6.0"
     deepmerge "^4.2.2"
 
-"@theme-ui/components@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#64121a1f3f542ddeb5ab66249d48db13e1fcea16"
-  integrity sha512-kLOVuq3QGn0i0kQSTJhhusdsa3Ky0NtLrrlOK0fQqY5eRyGxdOxT9Wkli7FS82yBYKgIAokBfN627p7QTOMXig==
+"@theme-ui/components@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.6.0.tgz#b07680346c675af5e852f48eb7cce459a5a3f342"
+  integrity sha512-5+PjwVE2VN+OD5L2NvfAsczVMhVg/xvaF/LF2SWjPwYHkyNb/pomU+A7j0ZkrOD4ZYbHXEfHzz+0hPiWt8Jrvg==
   dependencies:
     "@emotion/react" "^11.1.1"
     "@emotion/styled" "^11.0.0"
     "@styled-system/color" "^5.1.2"
     "@styled-system/should-forward-prop" "^5.1.2"
     "@styled-system/space" "^5.1.2"
-    "@theme-ui/css" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/css" "^0.6.0"
     "@types/styled-system" "^5.1.10"
 
-"@theme-ui/core@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#6474409461fad6002c28a522b650a5d52a73a2dd"
-  integrity sha512-Xyd+CLSABQod+veLvY0XcvAXmtM7kwXyToC5+SnJf03EyoTYoiu/nW0fv9s9iBnCHPMMFYjsvP+BP/ISSaPQsQ==
+"@theme-ui/core@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.6.0.tgz#a37a220c8aeb595ccc1dcbf86f25276554475c4f"
+  integrity sha512-q+O2j+4fnZHwyVPcY4iIHCxYCby0PdOzZNWvdtdoReldefI/+zB/6HMweEaIXAT1rS2abTBW9pyp1WJvzTeI9A==
   dependencies:
     "@emotion/react" "^11.1.1"
-    "@theme-ui/css" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-    "@theme-ui/parse-props" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/css" "^0.6.0"
+    "@theme-ui/parse-props" "^0.6.0"
     deepmerge "^4.2.2"
 
-"@theme-ui/css@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#eee5e51f1846283023db96a92d72c08de56b38c1"
-  integrity sha512-QHlhJSrw5TvclhzABf3XvmiMpkr8+V9P3IgwgbfOhBgBzMApy0lovg62mIpKSlTeoc+KIQvXcoRwAE7UmvVD/g==
+"@theme-ui/css@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.6.0.tgz#4fca3a2e730da232fbb67a1431bf7199ae6db977"
+  integrity sha512-+44BewW6nM4E4Fg4viutWV3y/AFxBDPgceStPoKNMWKB2h28KXFuEJIOyHse8sX39Keg/RIIcBk2q0EcDpB+LQ==
   dependencies:
     "@emotion/react" "^11.1.1"
     csstype "^3.0.5"
 
-"@theme-ui/mdx@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/mdx/-/mdx-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#0d747e582edab3345841f551b50d8f74622c2a78"
-  integrity sha512-7KWtUxd/9sxve5PZBm9rhnQKT0kVcNE6UnnRmDZTN2ik+nLItgFToKVKif5S32peESzWqlG9xoNgIyHT3jC9pA==
+"@theme-ui/mdx@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/mdx/-/mdx-0.6.0.tgz#cce422fb4c13ab45f3b39216726bb0e407e1d82e"
+  integrity sha512-1XJzCLRleu8/Pi0+mM4cPqhV+lYyLWipaYCmiO4vXJxzT20Ux3Hm3PvS8hbHiQEXrB+FkNzNbWQwIoLTs2S8dQ==
   dependencies:
     "@emotion/react" "^11.1.1"
     "@emotion/styled" "^11.0.0"
     "@mdx-js/react" "^1.6.22"
-    "@theme-ui/core" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-    "@theme-ui/css" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/core" "^0.6.0"
+    "@theme-ui/css" "^0.6.0"
 
-"@theme-ui/parse-props@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/parse-props/-/parse-props-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#3dd295d3ce872e6203284b89df8744e0dadd934e"
-  integrity sha512-N0diIGPo26+OLDp5MPiQcDWtRd2tcNE1qWSQgIoBTRX4zvCXho4Xe8O+DZKHGtpm6QOs3rhmOE/sV8IniM0D9Q==
+"@theme-ui/parse-props@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/parse-props/-/parse-props-0.6.0.tgz#dd6cf8cfb5414972527fbf2ae3f0910e5cb1830c"
+  integrity sha512-i+epJhWMU4cJjihR8yjljnEDzWjp+fe4C2lhQtbKGa47ErSdC7RXszaFJVas+TspbBHxBMu1Wg8z3pT3Ey4FKQ==
   dependencies:
     "@emotion/react" "^11.1.1"
-    "@theme-ui/css" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/css" "^0.6.0"
 
-"@theme-ui/theme-provider@0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0":
-  version "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0.tgz#08a9f8558b31ece03a08a628dde5d5f1feeb0212"
-  integrity sha512-7/Xl4xkwSjRllwj5CZ075klClobxntv0UXjl9tpMCMAP9W/hVliAtSikGf4G6+nX+zp8z+izzDmFFCjFi4VXNg==
+"@theme-ui/theme-provider@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.6.0.tgz#e8bfbaeb56bd77fe8f957afd984e5a31d4427c7c"
+  integrity sha512-IqWySde6wMT9IptFRfltUZyrr8Dw9/KEIWYogZXAII/wzPwkqED5tA2xLqMlqSm2BqROPxk9oEJtPmk1Hx56aQ==
   dependencies:
     "@emotion/react" "^11.1.1"
-    "@theme-ui/color-modes" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-    "@theme-ui/core" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
-    "@theme-ui/mdx" "0.6.0-canary.1544.5359f8a1e408a4dfeb74a9ae39688270286e534a.0"
+    "@theme-ui/color-modes" "^0.6.0"
+    "@theme-ui/core" "^0.6.0"
+    "@theme-ui/mdx" "^0.6.0"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -3265,17 +3265,17 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-theme-ui@^0.6.0-alpha.6:
-  version "0.6.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.6.0-alpha.7.tgz#04fa2dbed5ad6fccedf511bee6fbc8ffc9584c36"
-  integrity sha512-UqjgjBoq5R8hamgBWejB0FrBo2wXIjFPbUnPDMb0sukyWN5ak8HIfq9OECWWI/CEfDOUtPdoUlJkb6jzSDVDYg==
+theme-ui@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.6.0.tgz#21365591a154afad81cebb90753d25c33b8d4a57"
+  integrity sha512-44XV7cynI+4OQDFAMSzszil2tFlx6OhEde5fV9uhmXrHlMUtRFFH2qpsOI+HGtkQycl3j0DNmHeuxLXVapQjzg==
   dependencies:
-    "@theme-ui/color-modes" "0.6.0-alpha.7"
-    "@theme-ui/components" "0.6.0-alpha.7"
-    "@theme-ui/core" "0.6.0-alpha.7"
-    "@theme-ui/css" "0.6.0-alpha.7"
-    "@theme-ui/mdx" "0.6.0-alpha.7"
-    "@theme-ui/theme-provider" "0.6.0-alpha.7"
+    "@theme-ui/color-modes" "^0.6.0"
+    "@theme-ui/components" "^0.6.0"
+    "@theme-ui/core" "^0.6.0"
+    "@theme-ui/css" "^0.6.0"
+    "@theme-ui/mdx" "^0.6.0"
+    "@theme-ui/theme-provider" "^0.6.0"
 
 timers-browserify@^2.0.4:
   version "2.0.11"
